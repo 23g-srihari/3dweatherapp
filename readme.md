@@ -74,7 +74,7 @@ Enter the directory and install dependencies
 Execute the development server
 
 ```bash
-    npm run der
+    npm run dev
 ```
 
 ### For deployment
