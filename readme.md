@@ -62,7 +62,7 @@ In a Terminal or a CLI, be in your prefer folder and ..
 Clone the repository
 
 ```bash
-    git clone 'this repository'
+    git clone https://github.com/Rvjonh/WeatherApp.git
 ```
 
 Enter the directory and install dependencies
