@@ -1,8 +1,15 @@
-:root {
-    font-family: sans-serif, Arial, Helvetica, 'Times New Roman', Times, serif;
-    font-size: 16px;
-    line-height: 24px;
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Global typography and rendering */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Updated font stack */
+    font-size: 16px;
+    line-height: 1.5; /* Better readability with a unitless line-height */
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -10,16 +17,11 @@
     -webkit-text-size-adjust: 100%;
 }
 
-body, *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-#root{
-    width: 100%;
+/* Container styling */
+#root {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    padding: 20px; /* Adding some padding for breathing room */
 }

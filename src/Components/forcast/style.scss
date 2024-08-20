@@ -3,37 +3,33 @@
 
 $back-color: rgb(76, 198, 255);
 
-
-.rotate-flames{
+.rotate-flames {
     animation: turn-infinite 10s linear infinite;
 }
-.bounce-item{
+.bounce-item {
     animation: bounce 1.5s linear infinite;
 }
-.opaciting-item{
+.opaciting-item {
     animation: opaciting 2s linear infinite;
 }
-.falling-item{
+.falling-item {
     animation: falling 2s linear infinite;
 }
 
-.info{
+.info {
     width: 100%;
     flex: 1;
     display: flex;
     justify-content: flex-start;
     min-height: 40em;
 
-
-    @include mq(35em){
+    @include mq(35em) {
         width: 50%;
     }
-    
-    .info-container{
+
+    .info-container {
         position: relative;
-
         overflow: hidden;
-
         width: 100%;
         max-width: 50em;
         display: flex;
@@ -41,7 +37,7 @@ $back-color: rgb(76, 198, 255);
         justify-content: flex-start;
         align-items: center;
 
-        .info-bg{
+        .info-bg {
             width: 100%;
             max-width: 30em;
             display: flex;
@@ -50,51 +46,56 @@ $back-color: rgb(76, 198, 255);
             margin-top: 10%;
             border-radius: 0.5em;
             overflow: hidden;
-            background: linear-gradient(to bottom, rgba(92, 153, 245, 0.9), rgb(255, 255, 255));
-            padding: 0.5em;
-            box-shadow: 0.05em 0.05em 1em rgb(1, 92, 119);
+            background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
+            backdrop-filter: blur(10px); /* Adds blur behind the element */
+            padding: 1em;
+            box-shadow: 0.1em 0.1em 1em rgba(0, 0, 0, 0.2); /* Soft shadow */
 
+            /* Optional: Border */
+            border: 1px solid rgba(150, 150, 150, 0.3); /* Semi-transparent border */
+
+            /* Optional: Apple-like box shadow */
+            /* box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.2), 0 0.5em 1em rgba(0, 0, 0, 0.1); */
         }
 
-        .info-panel{
+        .info-panel {
             animation: show-up 0.25s ease;
             z-index: 2;
-
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            
-            .info-header{
+
+            .info-header {
                 width: 100%;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
 
-                .info-header-img{
+                .info-header-img {
                     width: 4em;
                     height: 4em;
                     object-fit: contain;
                 }
 
-                .info-country{
+                .info-country {
                     font-family: 'Times New Roman', Times, serif;
                     font-size: 3rem;
                     line-height: 2.5rem;
                     margin-left: 0.2em;
                 }
 
-                .info-weather-img{
+                .info-weather-img {
                     width: 4em;
                     height: 4em;
                     margin: 0.5em;
                     margin-left: auto;
                     position: relative;
 
-                    img{
+                    img {
                         position: absolute;
-                        top:0;
+                        top: 0;
                         right: 0;
                         bottom: 0;
                         left: 0;
@@ -104,18 +105,16 @@ $back-color: rgb(76, 198, 255);
                         filter: drop-shadow(2px 2px 15px rgba(0, 0, 0, 0.461));
                     }
                 }
-
             }
 
-            .weather-description{
+            .weather-description {
                 padding: 0.5em;
                 font-weight: bolder;
             }
 
-            .info-weather{
+            .info-weather {
                 width: 100%;
                 background-color: rgb(255, 255, 255);
-
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(2, 1fr);
@@ -123,34 +122,36 @@ $back-color: rgb(76, 198, 255);
                 grid-row-gap: 0.5em;
                 padding: 0.5em;
 
-                .info-part{
+                .info-part {
                     border: 0.2em solid $back-color;
                     display: flex;
                     padding: 1em 0;
 
-                    .info-img{
+                    .info-img {
                         width: 40%;
                         height: 100%;
-                        margin: 0 0.5em ;
-                        img{
+                        margin: 0 0.5em;
+
+                        img {
                             width: 100%;
                             height: 100%;
                             object-fit: contain;
                         }
                     }
-                    .info-content{
+
+                    .info-content {
                         width: 60%;
                         display: flex;
                         flex-direction: column;
                         justify-content: flex-start;
                         align-items: center;
 
-                        h3{
+                        h3 {
                             width: 100%;
                             text-align: center;
                         }
-                        
-                        .info-sumary{
+
+                        .info-sumary {
                             font-size: 1.2rem;
                             height: 100%;
                             display: flex;
@@ -158,7 +159,8 @@ $back-color: rgb(76, 198, 255);
                             justify-content: center;
                             align-items: center;
                         }
-                        .info-sumary-2{
+
+                        .info-sumary-2 {
                             font-size: 2rem;
                         }
                     }
@@ -166,7 +168,8 @@ $back-color: rgb(76, 198, 255);
             }
         }
     }
-    .info-background{
+
+    .info-background {
         height: 100%;
         position: absolute;
         right: 0;
@@ -174,7 +177,7 @@ $back-color: rgb(76, 198, 255);
     }
 }
 
-.btn{
+.btn {
     cursor: pointer;
     display: inline;
     font-size: 1.2rem;
@@ -184,8 +187,9 @@ $back-color: rgb(76, 198, 255);
     background-color: $back-color;
     transition: all 0.1s ease;
     z-index: 2;
-}
-.btn:active{
-    filter: brightness(0.9) opacity(0.9);
-    transform: scale(0.95);
+
+    &:active {
+        filter: brightness(0.9) opacity(0.9);
+        transform: scale(0.95);
+    }
 }

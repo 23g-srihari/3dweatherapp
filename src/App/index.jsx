@@ -6,7 +6,7 @@ import { ForeCast } from './../Components/forcast';
 
 import { useResizeElement } from './../hooks/useResizeElement';
 
-const InitCountry = './data/VenezuelaCountry.json';
+const InitCountry = './data/IndiaCountry.json';
 
 export default function App(){
     const [country, setCountry] = useState(null);

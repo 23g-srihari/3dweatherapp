@@ -1,0 +1,19 @@
+{
+    "properties": {
+        "abbrev": "Ind.",
+        "continent": "Asia",
+        "economy": "1. Advanced region: G20",
+        "formal_en": "Republic of India",
+        "gdp_md_est": 3190000,  
+        "lastcensus": 2011,
+        "pop_est": "1393409038",  
+        "name": "India",
+        "postal": "IN",
+        "region_un": "Asia",
+        "region_wb": "South Asia",
+        "lat": "20",
+        "lon": "77"
+    },
+    "type": "Feature",
+    "__id": 144
+}

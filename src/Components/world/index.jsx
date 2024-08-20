@@ -11,7 +11,7 @@ import bgImg from './../../assets/night-sky.png';
 
 const COUNTRIES_FILE = './data/Countries.json';
 
-const MAP_CENTER = { lat: 6.0, lng: -70.0, altitude: 1.5 };
+const MAP_CENTER = { lat: 20, lng: 77, altitude: 1.5 };
 
 
 export function World({country, setCountry, scrollDown=f=>f}){
@@ -57,9 +57,7 @@ export function World({country, setCountry, scrollDown=f=>f}){
 
     return <div className='globe' ref={square.ref}>
 
-        <div className='header'>
-            <h3>🔽 Select a Country 🔽</h3>
-        </div>
+      
 
         <Globe
             ref={globeRef}

@@ -145,7 +145,7 @@ export function ForeCast({country, panelRef}){
 
                 {isRefreshRequeired() &&
                     <button className='btn' onClick={requestWeatherData}>
-                        🔄 REFRESH 🔄
+                           REFRESH 
                     </button>
                 }
 
